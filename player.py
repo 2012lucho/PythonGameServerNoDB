@@ -1,3 +1,4 @@
 class Player():
-    def __init__(self):
-        self.id = 0
+    def __init__(self,id, wsF):
+        self.id        = id
+        self.wsFactory = wsF

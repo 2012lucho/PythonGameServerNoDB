@@ -31,6 +31,5 @@ class ClientFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return ClientProtocol(self)
 
-endpoints.serverFromString(reactor, "tcp:9998").listen(
-    WebSocketFactory(ClientFactory()))
+endpoints.serverFromString(reactor, "tcp:9998").listen( WebSocketFactory(ClientFactory() ) )
 reactor.run()
